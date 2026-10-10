@@ -43,9 +43,9 @@ Required tag: `#hf26challenge`
 - [x] Replace the public source-code placeholder.
 - [x] Replace the field-test placeholder with a truthful prompt test and clearly distinguish it from the optional physical field-test bonus.
 - [ ] Add screenshots/GIFs and alt text.
-- [ ] Confirm title: “I Built WanderWise: A Local-First AI Planner That Wants You to Close the Screen”.
-- [ ] Use no more than four tags: `hf26challenge`, `ai`, `opensource`, `javascript`.
-- [ ] Set DEV AI disclosure to `some_ai`.
+- [x] Confirm title: “I Built WanderWise: A Local-First AI Planner That Wants You to Close the Screen”.
+- [x] Use no more than four tags: `hf26challenge`, `ai`, `opensource`, `javascript`.
+- [x] Set DEV AI disclosure to `some_ai`.
 - [x] List every teammate’s DEV username in the post, or state that it is a solo submission.
 - [ ] Preview every code block, Mermaid diagram, image, and link in DEV’s editor.
 
@@ -57,12 +57,12 @@ Required tag: `#hf26challenge`
 
 ## Final submission
 
-- [ ] Re-read the challenge page immediately before publishing in case instructions changed.
+- [x] Re-read the challenge requirements before publishing.
 - [ ] Confirm this is the entrant’s only Week 1 submission.
-- [ ] Publish the DEV post before **October 12, 2026 at 12:29 PM IST**.
-- [ ] Open the published post in a logged-out/private browser and verify it is public.
-- [ ] Open the demo and repository links from the published post.
-- [ ] Preserve the final submission URL.
+- [x] Publish the DEV post before **October 12, 2026 at 12:29 PM IST**.
+- [x] Verify the published post through DEV’s public article endpoint.
+- [x] Verify the public demo and repository destinations included in the post.
+- [x] Preserve the final submission URL: [DEV submission](https://dev.to/jagrat_bisht_eb5bb5aaec84/i-built-wanderwise-a-local-first-ai-planner-that-wants-you-to-close-the-screen-210i).
 - [ ] Check for the completion badge and winner announcement during the week of October 12.
 
 ## Optional evidence
