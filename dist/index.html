@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#18372b" />
+    <meta name="description" content="WanderWise AI turns a few free minutes into a personal outdoor plan. Private, local-first, and powered by an open model." />
+    <title>WanderWise AI — less screen, more outside</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css?v=3" />
+  </head>
+  <body>
+    <a class="skip-link" href="#planner">Skip to planner</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="WanderWise home"><span class="brand-mark" aria-hidden="true">⌁</span><span>WanderWise</span></a>
+      <nav aria-label="Primary navigation"><a href="#how">How it works</a><a href="#open">Why open</a></nav>
+      <span class="local-pill"><span></span> Runs locally</span>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">An AI planner that wants you to close it</p>
+          <h1 id="hero-title">Your next good idea is <em>outside.</em></h1>
+          <p class="hero-sub">Tell us how you feel and what you have. Open-source AI turns it into a tiny adventure—then gets out of your way.</p>
+          <a class="hero-cta" href="#planner">Plan my escape <span aria-hidden="true">↘</span></a>
+          <div class="trust-row" aria-label="Product qualities"><span>✦ No account</span><span>✦ No API key</span><span>✦ Your prompt stays here</span></div>
+        </div>
+        <div class="hero-scene" aria-hidden="true">
+          <div class="sun"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+          <svg class="landscape" viewBox="0 0 720 510">
+            <path class="hill-back" d="M-30 400C100 260 180 330 275 245c88-78 140-24 206 47 75 81 149 22 269 108v150H-30Z" />
+            <path class="hill-front" d="M-40 450c153-104 256-107 354-41 92 62 166 1 267-25 67-17 123 13 179 55v111H-40Z" />
+            <path class="path" d="M388 550c-41-84-12-113 38-139 37-19 43-44 19-78" />
+            <g class="trees"><path d="m170 366 27-70 27 70h-17v45h-20v-45Z"/><path d="m536 362 23-60 23 60h-14v38h-18v-38Z"/><path d="m111 400 19-51 20 51h-12v33h-16v-33Z"/></g>
+            <g class="hiker"><circle cx="444" cy="365" r="10"/><path d="m443 376-5 34 25 25m-21-40 22-10m-26 25-19 25m45-50 8 50" /></g>
+          </svg>
+          <div class="field-note"><span>Today’s signal</span><strong>Go where the sky is wide.</strong></div>
+        </div>
+      </section>
+
+      <section class="planner-section" id="planner" aria-labelledby="planner-title">
+        <div class="section-heading"><p class="eyebrow">Make a plan in under a minute</p><h2 id="planner-title">What kind of outside do you need?</h2><p>No perfect prompt required. A mood, a constraint, or a half-formed idea is enough.</p></div>
+        <div class="planner-grid">
+          <form class="planner-card" id="planner-form">
+            <label class="field-label" for="intent">Right now, I want…</label>
+            <textarea id="intent" name="intent" rows="4" maxlength="240" placeholder="Something peaceful after a long day, not too far away…" required></textarea>
+            <div class="prompt-row" aria-label="Example ideas">
+              <button type="button" class="prompt-chip" data-prompt="A quiet reset with trees and no crowds">Quiet reset</button>
+              <button type="button" class="prompt-chip" data-prompt="A playful outdoor adventure with friends">Friend adventure</button>
+              <button type="button" class="prompt-chip" data-prompt="I want to notice birds, plants, and small details">Nature spotting</button>
+            </div>
+            <fieldset><legend>How much time?</legend><div class="segmented">
+              <label><input type="radio" name="duration" value="30" /><span>30 min</span></label>
+              <label><input type="radio" name="duration" value="60" checked /><span>1 hour</span></label>
+              <label><input type="radio" name="duration" value="120" /><span>2+ hours</span></label>
+            </div></fieldset>
+            <div class="two-col">
+              <label class="select-wrap">Going with<select id="company" name="company"><option value="solo">Just me</option><option value="friends">Friends</option><option value="family">Family</option><option value="date">A date</option></select></label>
+              <label class="select-wrap">Weather feels<select id="weather" name="weather"><option value="sunny">Clear & bright</option><option value="cloudy">Cool or cloudy</option><option value="rain">A little rainy</option><option value="hot">Hot</option></select></label>
+            </div>
+            <label class="range-label" for="energy"><span>Energy level</span><output id="energy-output">Steady</output></label>
+            <input id="energy" name="energy" type="range" min="1" max="5" value="3" />
+            <div class="range-scale"><span>Slow</span><span>Let’s move</span></div>
+            <button class="plan-button" type="submit"><span>Build my outdoor plan</span><span aria-hidden="true">→</span></button>
+            <p class="model-note" id="model-note"><span class="status-dot"></span><span>Open model loads only when you ask it to plan.</span></p>
+          </form>
+          <aside class="result-card empty" id="result" aria-live="polite">
+            <div class="result-empty"><div class="compass" aria-hidden="true"><span>✦</span></div><h3>Your plan will land here.</h3><p>Short, specific, and designed to end with your phone back in your pocket.</p></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="how-section" id="how" aria-labelledby="how-title">
+        <div class="section-heading compact"><p class="eyebrow">From vague mood to open door</p><h2 id="how-title">The shortest route to outside.</h2></div>
+        <div class="steps">
+          <article><span>01</span><h3>Say what you need</h3><p>Describe your mood naturally. No filters, search terms, or planning expertise.</p></article>
+          <article><span>02</span><h3>AI finds the fit</h3><p>A small open model compares your intent with a hand-curated set of outdoor experiences.</p></article>
+          <article><span>03</span><h3>Take only the plan</h3><p>Get a simple timeline, tiny gear list, and one safety cue. Then close the screen.</p></article>
+        </div>
+      </section>
+
+      <section class="open-section" id="open" aria-labelledby="open-title">
+        <div class="open-art" aria-hidden="true"><span class="open-ring"></span><span class="open-seed">✦</span></div>
+        <div class="open-copy"><p class="eyebrow">Open by design</p><h2 id="open-title">Private enough for the places you love.</h2><p>WanderWise uses the Apache-2.0 licensed all-MiniLM-L6-v2 family through Transformers.js. The model runs in your browser, so your mood and plans are not sent to an AI server.</p><div class="open-facts"><span>384-dimensional local embeddings</span><span>Transparent matching logic</span><span>Graceful low-tech fallback</span></div></div>
+      </section>
+    </main>
+
+    <footer><a class="brand footer-brand" href="#top"><span class="brand-mark">⌁</span>WanderWise</a><p>Built for Hacktoberfest 2026 · Touch Grass</p><p>Less screen. More sky.</p></footer>
+
+    <template id="result-template"><div class="result-content">
+      <div class="result-top"><p class="result-kicker">Your best match</p><span class="match-score"></span></div>
+      <div class="activity-icon"></div><h3 class="activity-title"></h3><p class="activity-reason"></p><div class="plan-meta"></div><div class="timeline"></div>
+      <div class="pack-list"><h4>Grab & go</h4><div></div></div><div class="safety-note"><span>✦</span><p></p></div>
+      <div class="result-actions"><button class="secondary-button copy-button" type="button">Copy plan</button><button class="primary-small again-button" type="button">Try another</button></div>
+    </div></template>
+    <script type="module" src="./app.js?v=3"></script>
+  </body>
+</html>
+
