@@ -8,9 +8,9 @@ Required tag: `#hf26challenge`
 ## Go/no-go blockers
 
 - [x] **Make the demo judge-accessible.** The deployment is public at [wanderwise-ai.jagratbisht60.chatgpt.site](https://wanderwise-ai.jagratbisht60.chatgpt.site).
-- [ ] **Create a public source repository.** Add its URL to `DEV_SUBMISSION.md`.
-- [ ] **Run WanderWise outdoors once.** Record the prompt, general setting, result, what worked, and what changed. Do not disclose a precise home location or routine.
-- [ ] **Add visual proof.** Capture the landing page, completed plan, and preferably one non-sensitive field-test photo or short demo GIF. Add descriptive alt text.
+- [x] **Create a public source repository.** Source is public at [github.com/Jagrat567/wanderwise-ai](https://github.com/Jagrat567/wanderwise-ai).
+- [x] **Document the real prompt test truthfully.** The post records “just nature and lakes” → “A micro-hike with a summit,” explains the partial mismatch, and does not claim the optional physical field-test bonus.
+- [ ] **Optional visual enhancement.** Add a landing-page or completed-plan screenshot with descriptive alt text in a later article update.
 - [ ] **Confirm entrant eligibility.** Entrant is 18+ or the local age of majority, has an active DEV account, is not in an excluded jurisdiction, and is permitted to enter under applicable employer rules.
 
 ## Project requirements
